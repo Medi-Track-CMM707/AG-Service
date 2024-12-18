@@ -1,6 +1,6 @@
 spring:
   application:
-    name: patient-record-service
+    name: ag-service
   datasource:
     username: ${DB_USER_NAME}
     password: ${DB_PASSWORD}

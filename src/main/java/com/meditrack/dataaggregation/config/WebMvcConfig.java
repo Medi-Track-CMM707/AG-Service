@@ -1,6 +1,6 @@
-package com.meditrack.prs.config;
+package com.meditrack.dataaggregation.config;
 
-import com.meditrack.prs.interceptor.HeaderInterceptor;
+import com.meditrack.dataaggregation.interceptor.HeaderInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;

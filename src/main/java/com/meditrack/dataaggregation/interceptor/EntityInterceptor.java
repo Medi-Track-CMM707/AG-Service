@@ -1,8 +1,8 @@
-package com.meditrack.prs.interceptor;
+package com.meditrack.dataaggregation.interceptor;
 
-import com.meditrack.prs.model.entity.Base;
-import com.meditrack.prs.service.HeaderReadService;
-import com.meditrack.prs.util.ApplicationUtil;
+import com.meditrack.dataaggregation.model.entity.Base;
+import com.meditrack.dataaggregation.service.HeaderReadService;
+import com.meditrack.dataaggregation.util.ApplicationUtil;
 import jakarta.persistence.PrePersist;
 
 public class EntityInterceptor {

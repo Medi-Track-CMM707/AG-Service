@@ -1,8 +1,8 @@
-package com.meditrack.prs.interceptor;
+package com.meditrack.dataaggregation.interceptor;
 
-import com.meditrack.prs.constant.ErrorCode;
-import com.meditrack.prs.exception.PrsInvalidRequestException;
-import com.meditrack.prs.service.HeaderReadService;
+import com.meditrack.dataaggregation.constant.ErrorCode;
+import com.meditrack.dataaggregation.exception.dataaggregationInvalidRequestException;
+import com.meditrack.dataaggregation.service.HeaderReadService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
@@ -37,10 +37,10 @@ public class HeaderInterceptor implements HandlerInterceptor {
         } catch (Exception e) {
             log.error("Error while setting the tenant details to the context.", e);
             String headerPath = request.getRequestURI();
-            if (headerPath.contains("/prs/swagger-ui.html") || headerPath.contains("/prs/v3/api-docs") || headerPath.contains("/prs/swagger-ui/")) {
+            if (headerPath.contains("/dataaggregation/swagger-ui.html") || headerPath.contains("/dataaggregation/v3/api-docs") || headerPath.contains("/dataaggregation/swagger-ui/")) {
                 return true;
             }
-            throw new PrsInvalidRequestException(ErrorCode.PRM_003002, "Invalid header details/ header details are missing. x-hospital and x-user are mandatory headers.");
+            throw new dataaggregationInvalidRequestException(ErrorCode.PRM_003002, "Invalid header details/ header details are missing. x-hospital and x-user are mandatory headers.");
         }
         return true;
     }

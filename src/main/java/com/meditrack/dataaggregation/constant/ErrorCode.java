@@ -1,4 +1,4 @@
-package com.meditrack.prs.constant;
+package com.meditrack.dataaggregation.constant;
 
 import lombok.Getter;
 

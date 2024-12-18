@@ -1,4 +1,4 @@
-package com.meditrack.prs.model.entity;
+package com.meditrack.dataaggregation.model.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.MappedSuperclass;

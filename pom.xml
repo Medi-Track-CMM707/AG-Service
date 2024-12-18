@@ -9,11 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.meditrack</groupId>
-    <artifactId>prs</artifactId>
+    <artifactId>dataaggregation</artifactId>
     <version>0.0.1</version>
-    <name>patient-record-service</name>
-    <description>Stores and updates patient information such as demographics,medical history, prescriptions,and lab
-        results.
+    <name>ag-service</name>
+    <description>Data Aggreation Services for appointment for doctor, frequncy of appointment and to find the common symptoms.
     </description>
     <url/>
     <licenses>

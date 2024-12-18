@@ -1,0 +1,10 @@
+package com.dataaggregation.model.entity;
+
+import lombok.Data;
+
+@Data
+public class SymptomReport {
+    private String specialty;
+    private String condition;
+    private Long count;
+}

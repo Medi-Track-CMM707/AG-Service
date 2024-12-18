@@ -1,8 +1,8 @@
-package com.meditrack.prs.exception;
+package com.meditrack.dataaggregation.exception;
 
 
-import com.meditrack.prs.constant.ErrorCode;
-import com.meditrack.prs.model.dto.ErrorResponseDTO;
+import com.meditrack.dataaggregation.constant.ErrorCode;
+import com.meditrack.dataaggregation.model.dto.ErrorResponseDTO;
 import jakarta.annotation.Nullable;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
@@ -21,15 +21,15 @@ import java.util.Map;
 
 @ControllerAdvice
 @Slf4j
-public class PrsExceptionHandler extends ResponseEntityExceptionHandler {
+public class dataaggregationExceptionHandler extends ResponseEntityExceptionHandler {
 
 
     @ExceptionHandler({Exception.class})
     public ResponseEntity<ErrorResponseDTO> handlePatientInternalServerException(Exception e) {
         log.error("An error occurred in Exception", e);
         return new ResponseEntity<>(new ErrorResponseDTO(
-                ErrorCode.PRS_002001.name(),
-                ErrorCode.PRS_002001.getMessage(),
+                ErrorCode.dataaggregation_002001.name(),
+                ErrorCode.dataaggregation_002001.getMessage(),
                 e.getMessage()
         ), HttpStatus.INTERNAL_SERVER_ERROR);
     }
@@ -46,8 +46,8 @@ public class PrsExceptionHandler extends ResponseEntityExceptionHandler {
         });
 
         return new ResponseEntity<>(new ErrorResponseDTO(
-                ErrorCode.PRS_003001.name(),
-                ErrorCode.PRS_003001.getMessage(),
+                ErrorCode.dataaggregation_003001.name(),
+                ErrorCode.dataaggregation_003001.getMessage(),
                 errors
         ), HttpStatus.BAD_REQUEST);
     }

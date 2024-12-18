@@ -1,4 +1,4 @@
-package com.meditrack.prs.service;
+package com.meditrack.dataaggregation.service;
 
 import lombok.Getter;
 import org.springframework.stereotype.Service;

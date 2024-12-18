@@ -1,4 +1,4 @@
-package com.meditrack.prs.util;
+package com.meditrack.dataaggregation.util;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
