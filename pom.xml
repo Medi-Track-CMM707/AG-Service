@@ -154,7 +154,7 @@
                 </executions>
             </plugin>
         </plugins>
-        <finalName>patient-record-service</finalName>
+        <finalName>ag-service</finalName>
     </build>
 
 </project>
