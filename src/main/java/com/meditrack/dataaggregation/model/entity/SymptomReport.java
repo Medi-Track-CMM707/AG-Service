@@ -1,4 +1,4 @@
-package com.dataaggregation.model.entity;
+package com.meditrack.dataaggregation.model.entity;
 
 import lombok.Data;
 

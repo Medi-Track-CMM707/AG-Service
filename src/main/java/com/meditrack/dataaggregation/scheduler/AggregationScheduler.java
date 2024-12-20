@@ -1,6 +1,6 @@
-package com.dataaggregation.scheduler;
+package com.meditrack.dataaggregation.scheduler;
 
-import com.dataaggregation.service.AggregationService;
+import com.meditrack.dataaggregation.service.AggregationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;

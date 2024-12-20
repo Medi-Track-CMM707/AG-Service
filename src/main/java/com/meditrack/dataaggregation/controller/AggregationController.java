@@ -1,8 +1,8 @@
-package com.dataaggregation.controller;
+package com.meditrack.dataaggregation.controller;
 
-import com.dataaggregation.model.DoctorAggregation;
-import com.dataaggregation.model.SymptomReport;
-import com.dataaggregation.service.AggregationService;
+import com.meditrack.dataaggregation.model.entity.DoctorAggregation;
+import com.meditrack.dataaggregation.model.entity.SymptomReport;
+import com.meditrack.dataaggregation.service.AggregationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

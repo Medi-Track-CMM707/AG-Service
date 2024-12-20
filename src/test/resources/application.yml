@@ -1,6 +1,6 @@
 spring:
   application:
-    name: patient-record-service
+    name: ag-service
   datasource:
     username: sa
     password:
@@ -16,4 +16,4 @@ spring:
 server:
   port: 3054
   servlet:
-    context-path: /prs
+    context-path: /ag

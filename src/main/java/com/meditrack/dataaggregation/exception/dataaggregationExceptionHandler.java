@@ -28,8 +28,8 @@ public class dataaggregationExceptionHandler extends ResponseEntityExceptionHand
     public ResponseEntity<ErrorResponseDTO> handlePatientInternalServerException(Exception e) {
         log.error("An error occurred in Exception", e);
         return new ResponseEntity<>(new ErrorResponseDTO(
-                ErrorCode.dataaggregation_002001.name(),
-                ErrorCode.dataaggregation_002001.getMessage(),
+                ErrorCode.PRS_002001.name(),
+                ErrorCode.PRS_002001.getMessage(),
                 e.getMessage()
         ), HttpStatus.INTERNAL_SERVER_ERROR);
     }
@@ -46,8 +46,8 @@ public class dataaggregationExceptionHandler extends ResponseEntityExceptionHand
         });
 
         return new ResponseEntity<>(new ErrorResponseDTO(
-                ErrorCode.dataaggregation_003001.name(),
-                ErrorCode.dataaggregation_003001.getMessage(),
+                ErrorCode.PRS_003001.name(),
+                ErrorCode.PRS_003001.getMessage(),
                 errors
         ), HttpStatus.BAD_REQUEST);
     }

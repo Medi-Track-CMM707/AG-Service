@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: ag-service
-          image: nilakshanr/ag-service:0.0.3
+          image: nilakshanr/ag-service:0.0.1
           ports:
             - containerPort: 8080
