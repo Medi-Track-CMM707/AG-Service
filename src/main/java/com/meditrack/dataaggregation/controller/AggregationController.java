@@ -1,7 +1,8 @@
 package com.meditrack.dataaggregation.controller;
 
 import com.meditrack.dataaggregation.model.entity.DoctorAggregation;
-import com.meditrack.dataaggregation.model.entity.SymptomReport;
+import com.meditrack.dataaggregation.model.entity.CommonConditionBySpecialty;
+import com.meditrack.dataaggregation.model.entity.AppointmentFrequency;
 import com.meditrack.dataaggregation.service.AggregationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -20,8 +21,13 @@ public class AggregationController {
         return service.getAppointmentsPerDoctor();
     }
 
+    @GetMapping("/appointments-frequency")
+    public List<AppointmentFrequency> getAppointmentFrequencyOverTime() {
+        return service.getAppointmentFrequencyOverTime();
+    }
+
     @GetMapping("/common-conditions")
-    public List<SymptomReport> getCommonConditionsBySpecialty() {
+    public List<CommonConditionBySpecialty> getCommonConditionsBySpecialty() {
         return service.getCommonConditionsBySpecialty();
     }
 }
