@@ -26,7 +26,7 @@ public class AggregationController {
         return service.getAppointmentFrequencyOverTime();
     }
 
-    @GetMapping("/common-conditions")
+    @GetMapping("/common_conditions")
     public List<CommonConditionBySpecialty> getCommonConditionsBySpecialty() {
         return service.getCommonConditionsBySpecialty();
     }
