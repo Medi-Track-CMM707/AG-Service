@@ -66,7 +66,7 @@ public class CustomQueryRepository {
                     "GROUP BY d.specialization, mh.diagnosis " +
                     "ORDER BY d.specialization, count DESC";
         return jdbcTemplate.query(sql, (rs, rowNum) -> {
-            CommonConditionBySpecialty report = new CommonConditionBySpecialtyCardiology();
+            CommonConditionBySpecialty report = new CommonConditionBySpecialty();
             report.setSpecialty(rs.getString("specialty"));
             report.setCondition(rs.getString("condition"));
             report.setCount(rs.getLong("count"));
