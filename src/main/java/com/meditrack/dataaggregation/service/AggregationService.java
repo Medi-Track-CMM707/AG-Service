@@ -26,4 +26,7 @@ public class AggregationService {
     public List<CommonConditionBySpecialty> getCommonConditionsBySpecialty() {
         return repository.getCommonConditionsBySpecialty();
     }
+    public List<CommonConditionBySpecialty> getCommonConditionsBySpecialtyCardiology() {
+        return repository.getCommonConditionsBySpecialtyCardiology();
+    }
 }

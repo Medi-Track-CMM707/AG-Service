@@ -57,4 +57,23 @@ public class CustomQueryRepository {
         });
     }
 
+
+    public List<CommonConditionBySpecialty> getCommonConditionsBySpecialtyCardiology() {
+        String sql = "SELECT d.specialization AS specialty, mh.diagnosis AS condition, COUNT(mh.diagnosis) AS count " +
+                    "FROM patient_record.medical_history mh " +
+                    "JOIN reservation.doctor d ON mh.patient_id = d.id " +
+                    "WHERE d.specialization = 'Cardiology' " +
+                    "GROUP BY d.specialization, mh.diagnosis " +
+                    "ORDER BY d.specialization, count DESC";
+        return jdbcTemplate.query(sql, (rs, rowNum) -> {
+            CommonConditionBySpecialty report = new CommonConditionBySpecialtyCardiology();
+            report.setSpecialty(rs.getString("specialty"));
+            report.setCondition(rs.getString("condition"));
+            report.setCount(rs.getLong("count"));
+            return report;
+        });
+    }
+
+
+
 }

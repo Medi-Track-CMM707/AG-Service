@@ -30,4 +30,8 @@ public class AggregationController {
     public List<CommonConditionBySpecialty> getCommonConditionsBySpecialty() {
         return service.getCommonConditionsBySpecialty();
     }
+    @GetMapping("/common_conditions/cardiology")
+    public List<CommonConditionBySpecialty> getCommonConditionsBySpecialtyCardiology() {
+        return service.getCommonConditionsBySpecialtyCardiology();
+    }
 }
